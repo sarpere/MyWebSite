@@ -1,0 +1,21 @@
+.whoAmI{
+    justify-content: center;
+    align-items: center;
+}
+.Thecnologies{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    .LanguageContainer{
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+        img {
+            max-width: 100px;
+            height: 70px;
+            margin: 5px 20px;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@import "~bootstrap/scss/bootstrap";
+body {
+    box-sizing: border-box;
+    margin: 0;
+    transition-duration: 300ms;
+}
+.Content {
+    min-height: calc(100vh - 75px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #0d1631;
+    // background:  url('/icons/bg.jpg') no-repeat center center fixed;
+    // background-size: cover;
+    // background-position: center;
+    // background-color: white;
+    & > div {
+        flex: 1;
+    }
+}
+
+.Layout {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.link:hover {
+    transition-duration: 300ms;
+    opacity: 0.75;
+}
+p {
+    margin-bottom: 0;
+}
+.pageIn {
+    transform-origin: center;
+    animation: 1.2s ease-in-out 1 alternate pageInAnimation;
+}
+.pageOut {
+    transform-origin: center;
+    animation: 1.2s ease-in-out 1 alternate pageOutAnimation;
+}
+
+@keyframes pageInAnimation {
+    0% {
+        transform: scale(0.95);
+        transform: translateZ(-100px) rotateY(-90deg);
+    }
+
+    80% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+        transform: translateZ(-100px) rotateY(0deg);
+    }
+}
+@keyframes pageOutAnimation {
+    0% {
+        transform: scale(1);
+        transform: translateZ(-100px) rotateY(0deg);
+    }
+
+    20% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: translateZ(-100px) rotateY(90deg);
+    }
+}
+@media only screen and (min-width: 708px) {
+    .container-fluid {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+@media only screen and (min-width: 802px) {
+    .container-fluid {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .container-fluid {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+}
+.page-transition-enter {
+    opacity: 1;
+}
+.page-transition-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+.page-transition-exit {
+    opacity: 1;
+}
+.page-transition-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.marginB-1 {
+    margin-bottom: 1rem !important;
+}
+.jumbotron {
+    background-color: white;
+}
+.btn-primary {
+    border-color: #101b3d;
+    background-color: #101b3d;
+    &:hover, &:active, &:focus, &:visited {
+        border-color: #101b3dd0;
+        background-color: #101b3dd0;
+    }
+   
+}
